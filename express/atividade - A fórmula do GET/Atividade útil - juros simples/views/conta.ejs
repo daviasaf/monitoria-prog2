@@ -7,18 +7,26 @@
     <title>Aprendendo Express e EJS</title>
     <style>
         body {
-            background-color: black;
+            background-color: rgb(109, 109, 109);
             color: darkblue;
         }
     </style>
 </head>
 <body>
     <h1>Hello EJS and Express</h1>
-    <p>Conta de área do quadrado</p>
+    <p>Conta de juros compostos</p>
     <form action="/resultado" method="get">
         <div>
-            <label for="num1">Tamanho do lado: </label>
-            <input type="text" name="num1">
+            <label for="num1">Capital inicial: </label>
+            <input type="text" name="capital">
+        </div>
+        <div>
+            <label for="num1">Taxa de juros(em decimal): </label>
+            <input type="text" name="taxa">
+        </div>
+        <div>
+            <label for="num1">Tempo de aplicação(dias): </label>
+            <input type="text" name="tempo">
         </div>
         <input type="submit" value="Somar">
     </form>

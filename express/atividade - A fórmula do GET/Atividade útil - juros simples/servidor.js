@@ -10,9 +10,16 @@ app.get('/', (req, res) => {
     res.render('conta')
 })
 app.get('/resultado', (req, res) => {
-    let n1 = Number(req.query.num1)
-    let total = n1**2
-    res.render('resultado', {total})
+    let capital = Number(req.query.capital)
+    let taxa = Number(req.query.taxa)
+    let tempo = Number(req.query.tempo)
+    let juros = capital*taxa*tempo
+    res.render('resultado', { 
+        capital: capital,
+        taxa: taxa,
+        tempo: tempo,
+        juros: juros
+    });
 })
 app.listen(port, () => {
     console.log(`Servidor rodando na porta http://localhost:${port}`)
