@@ -1,3 +1,0 @@
-
-<%-include("cabecalho")>
-tem como colocar parametro
