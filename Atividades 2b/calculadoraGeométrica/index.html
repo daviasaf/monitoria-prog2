@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora Geométrica</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f2f5;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            /* Alinha no topo, não no centro vertical */
+            min-height: 100vh;
+            margin: 0;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+
+        .container {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 600px;
+            text-align: center;
+        }
+
+        .header {
+            background-color: #007bff;
+            /* Azul vibrante */
+            color: white;
+            padding: 15px 0;
+            border-radius: 8px 8px 0 0;
+            margin: -30px -30px 20px -30px;
+            /* Ajusta para preencher o topo do container */
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .header h1 {
+            margin: 0;
+            font-size: 1.8em;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+            text-align: left;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: bold;
+            color: #333;
+        }
+
+        .form-group select,
+        .form-group input[type="number"] {
+            width: calc(100% - 20px);
+            /* Ajusta para padding */
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 1em;
+            margin-bottom: 15px;
+            /* Espaço entre os inputs */
+        }
+
+        /* Esconder os inputs por padrão */
+        .input-field {
+            display: none;
+            /* Esconde todos os campos por padrão */
+        }
+
+        .input-field.active {
+            display: block;
+            /* Mostra o campo ativo */
+        }
+
+
+        .buttons-container {
+            display: flex;
+            flex-wrap: wrap;
+            /* Permite que os botões quebrem a linha em telas menores */
+            justify-content: center;
+            gap: 15px;
+            /* Espaço entre os botões */
+            margin-top: 25px;
+        }
+
+        .btn {
+            background-color: #007bff;
+            color: white;
+            padding: 12px 25px;
+            border: none;
+            border-radius: 5px;
+            font-size: 1.1em;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            flex-grow: 1;
+            /* Permite que os botões cresçam para preencher o espaço */
+            max-width: 180px;
+            /* Limita o tamanho máximo dos botões */
+        }
+
+        .btn:hover {
+            background-color: #0056b3;
+        }
+
+        .result-box {
+            background-color: #e9ecef;
+            padding: 15px;
+            border-radius: 5px;
+            margin-top: 30px;
+            min-height: 50px;
+            /* Garante que a caixa tenha um tamanho mínimo */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 1px solid #ced4da;
+        }
+
+        #resultado {
+            font-size: 1.3em;
+            font-weight: bold;
+            color: #007bff;
+            margin: 0;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Calculadora Geométrica</h1>
+        </div>
+
+        <div class="form-group">
+            <label for="formaGeometricas">Escolha a forma geométrica:</label>
+            <select id="formaGeometricas">
+                <option value="">Selecione uma forma</option>
+                <option value="quadrado">Quadrado</option>
+                <option value="retangulo">Retângulo</option>
+                <option value="paralelogramo">Paralelogramo</option>
+                <option value="trapezio">Trapézio</option>
+                <option value="losango">Losango</option>
+                <option value="triangulo">Triângulo</option>
+                <option value="circulo">Círculo</option>
+            </select>
+        </div>
+
+        <div id="inputsContainer">
+        </div>
+
+        <div class="buttons-container">
+            <button id="calcularArea" class="btn">Calcular Área</button>
+            <button id="calcularPerimetro" class="btn">Calcular Perímetro</button>
+            <button id="calcularVolume" class="btn">Calcular Volume</button>
+        </div>
+
+        <div class="result-box">
+            <p id="resultado"></p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
