@@ -1,0 +1,117 @@
+/* ====== ESTILO GERAL ====== */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f4f6f9;
+    margin: 0;
+    padding: 0;
+}
+
+h2 {
+    text-align: center;
+    color: #333;
+}
+
+/* ====== CONTAINER DO FORM ====== */
+.form-container {
+    max-width: 500px;
+    margin: 40px auto;
+    background: #fff;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* ====== GRUPOS DO FORM ====== */
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 6px;
+    color: #555;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="email"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-sizing: border-box;
+    font-size: 14px;
+    outline: none;
+    transition: 0.3s;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="email"]:focus {
+    border-color: #4CAF50;
+    box-shadow: 0 0 5px rgba(76, 175, 80, 0.3);
+}
+
+/* ====== BOTÕES ====== */
+button,
+input[type="submit"],
+.botao-link {
+    display: inline-block;
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 18px;
+    border: none;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 15px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover,
+input[type="submit"]:hover,
+.botao-link:hover {
+    background-color: #45a049;
+}
+
+/* ====== LISTAS ====== */
+ul {
+    max-width: 400px;
+    margin: 30px auto;
+    background: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    list-style: none;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+ul li {
+    padding: 10px;
+    border-bottom: 1px solid #eee;
+}
+
+ul li:last-child {
+    border-bottom: none;
+}
+
+/* ====== FORM DE DELETAR ====== */
+form {
+    max-width: 400px;
+    margin: 30px auto;
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* ====== RESPONSIVIDADE ====== */
+@media (max-width: 600px) {
+
+    .form-container,
+    form,
+    ul {
+        margin: 20px;
+        padding: 15px;
+    }
+}

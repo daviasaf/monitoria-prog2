@@ -1,0 +1,16 @@
+<%- include("partials/cabecalho") %>
+
+<ul>
+  <% arquivosFiltrado.forEach((arquivo) => { 
+       let nomeRegistrado = arquivo.replace(".txt", ""); 
+       if (userForDelete !== nomeRegistrado) { %>
+    <li><%= nomeRegistrado %></li>
+  <% } }); %>
+</ul>
+
+<div style="text-align: center; margin-top: 15px;">
+    <a href="/deletarUsuarios" class="botao-link">Deletar Usuários</a>
+    <a href="/" class="botao-link">Registrar mais usuários</a>
+</div>
+
+<%- include("partials/rodape") %>

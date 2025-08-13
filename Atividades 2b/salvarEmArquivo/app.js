@@ -26,7 +26,6 @@ app.post("/recebido", (req, res) => {
     curso: curso,
     idade: idade,
   };
-
   const dadosConvertidos = JSON.stringify(dadosDoFormulario) + "\n";
   fs.appendFile("bancoDados.txt", dadosConvertidos, (err) => {
     if (err) {
